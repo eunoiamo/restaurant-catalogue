@@ -4,8 +4,6 @@ const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-// eslint-disable-next-line prefer-destructuring
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const common = require('./webpack.common');
 
@@ -69,6 +67,6 @@ module.exports = merge(common, {
         }),
       ],
     }),
-    new BundleAnalyzerPlugin(),
+
   ],
 });
