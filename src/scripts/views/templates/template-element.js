@@ -23,6 +23,12 @@ const createHeroElement = () => `
 </div>
 
 `;
+
+const createRestaurantTitleTemplate = () => `
+<h2>Daftar Restaurant</h2>
+<p>Berikut merupakan daftar restaurant kami, silakan</p>
+`;
+
 const createRestaurantItemTemplate = (restaurant) => `
 <div class="card">
   <div class="skeleton"></div>
@@ -128,4 +134,5 @@ export {
   createRemoveFromFavoriteButtonTemplate,
   createRestaurantMenusDrinks,
   createFormReviewTemplate,
+  createRestaurantTitleTemplate,
 };
