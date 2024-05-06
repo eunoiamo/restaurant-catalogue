@@ -12,13 +12,12 @@ const MainPages = {
   async render() {
     return `
     <div class="hero"></div>
-    <div class="about__us">  </div>
+    <div class="about__us"></div>
 
     <div class="restaurant__container">
       <div class="inner_restaurant"></div>
       <div class="restaurant-list"></div>
     </div>
-
 
   `;
   },
@@ -30,13 +29,12 @@ const MainPages = {
     const restaurants = await RestaurantAPI.getDataRestaurant();
 
     hero.innerHTML = createHeroElement();
+    about.innerHTML = createAboutUsElement();
+
+    titleContainer.innerHTML = createRestaurantTitleTemplate();
     restaurants.forEach((resto) => {
       restaurantContainer.innerHTML += createRestaurantItemTemplate(resto);
     });
-
-    titleContainer.innerHTML = createRestaurantTitleTemplate();
-
-    about.innerHTML = createAboutUsElement();
   },
 };
 
