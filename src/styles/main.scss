@@ -416,7 +416,7 @@ header {
 }
 
  .about__us {
-  height: 80vh;
+  height: 900vh;
   background-color: $night;
   color: $timberwolf;
 
@@ -453,10 +453,11 @@ header {
   .image__container {
     display: flex;
     gap: 20px;
+    flex-direction: column;
     margin-bottom: 20px;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+
 
     img {
       width: 300px;
@@ -912,7 +913,7 @@ footer {
     letter-spacing: 0.4rem;
   }
 
-  .about__us .about__content .image__container {
+  .about__us .image__container {
     flex-direction: row;
     justify-content: center;
     padding-bottom: 20px;
@@ -925,8 +926,8 @@ footer {
     grid-template-columns: 1fr 1fr;
     padding: 20px 120px;
   }
-  .about__us .about__content .image__container {
-    flex-direction: column;
+  .about__us .image__container {
+    flex-direction: row;
     gap: 10px;
   }
 }
@@ -946,7 +947,7 @@ footer {
   .restaurant-list {
     grid-template-columns: 1fr 1fr 1fr;
   }
-  .about__us .about__content .image__container img {
+  .about__us .image__container img {
     width: 450px;
     height: 250px;
     object-fit: cover;
