@@ -6,7 +6,7 @@ const createHeroElement = () => `
     <picture>
       <source media="(max-width: 600px)" srcset="./images/heros/hero-image_2-small.jpg">
       <img class="hero__image" src="./images/heros/hero-image_2-large.jpg" 
-        alt="banner gambar restoran" srcset="" />
+        alt="banner gambar restoran"/>
     </picture>
     <div class="hero__inner">
       <div class="img__logo">
@@ -31,21 +31,20 @@ const createRestaurantTitleTemplate = () => `
 
 const createRestaurantItemTemplate = (restaurant) => `
 <div class="card">
-  <div class="skeleton"></div>
-  <div class="card-content">
-  <div class="card">
-    <img src="${CONFIG.BASE_IMAGE_MEDIUM_URL}/${restaurant.pictureId}" alt="${restaurant.name} image"
-      class="lazyload restaurant__image" />
-    <a href="/#/detail/${restaurant.id}">
-      <p class="blurry"></p>
-    </a>
+  <picture>
+    <source media="(max-width: 600px)" data-srcset="${CONFIG.BASE_IMAGE_SMALL_URL}/${restaurant.pictureId}">
+    <img data-src="${CONFIG.BASE_IMAGE_MEDIUM_URL}/${restaurant.pictureId}" alt="${restaurant.name} image" class="lazyload restaurant__image" />
+  </picture>
+  <a href="/#/detail/${restaurant.id}">
+    <p class="blurry"></p>
+  </a>
   <h2 class="restaurant__name">
-  <a href="/#/detail/${restaurant.id}">${restaurant.name}</a>
+    <a href="/#/detail/${restaurant.id}">${restaurant.name}</a>
   </h2>
-  <p class="city"><i class="fa-solid fa-location-dot"></i>${restaurant.city}</p>
+  <p class="city">
+    <i class="fa-solid fa-location-dot"></i>${restaurant.city}
+  </p>
   <p class="rating">⭐ ${restaurant.rating}</p>
-  </div>
-  </div>
 </div>
 `;
 const createAboutUsElement = () => `
