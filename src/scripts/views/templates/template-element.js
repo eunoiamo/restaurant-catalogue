@@ -10,7 +10,7 @@ const createHeroElement = () => `
     </picture>
     <div class="hero__inner">
       <div class="img__logo">
-        <img src="./images/logo/png/logo-tr.png" alt="Gambar Logo Restaurant" />
+        <img class="lazyload" src="./images/logo/png/logo-tr.png" alt="Gambar Logo Restaurant" />
       </div>
       <h1 class="hero__title">Restaurant</h1>
       <p class="tagline">
@@ -50,17 +50,18 @@ const createRestaurantItemTemplate = (restaurant) => `
 `;
 const createAboutUsElement = () => `
 
-  <div class="about__content">
-    <h3 class="tagline">Discover Culinary Delights with Dine Ease!</h3>
-    <h2 class="about__title">About Us</h2>
-    <p>
-      Dine Ease adalah teman kuliner terbaik Anda, yang berkomitmen untuk memberikan pengalaman makan yang luar biasa. Kami hadir dengan misi menyediakan akses mudah ke restoran terbaik di berbagai kota, dengan menyajikan informasi yang akurat dan relevan tentang restoran favorit, menu mereka, dan ulasan dari para pelanggan. Tim kami berusaha keras untuk terus meningkatkan platform kami demi memenuhi kebutuhan dan harapan Anda. Terima kasih telah memilih Dine Ease sebagai panduan kuliner Anda. Temukan restoran terbaik bersama kami dan nikmati petualangan kuliner yang tak terlupakan!
-    </p>
-  </div>
-  <div class="image__container">
-  <img src="./images/food/food-2.jpg" alt="gambar makanan spagetti">
-  <img src="./images/food/r-1.jpg" alt="gambar ilustrasi restaurant">
-  </div>
+<div class="about__content">
+<h3 class="tagline">Discover Culinary Delights with Dine Ease!</h3>
+<h2 class="about__title">About Us</h2>
+<p>
+  Dine Ease adalah teman kuliner terbaik Anda, yang berkomitmen untuk memberikan pengalaman makan yang luar biasa. Kami hadir dengan misi menyediakan akses mudah ke restoran terbaik di berbagai kota, dengan menyajikan informasi yang akurat dan relevan tentang restoran favorit, menu mereka, dan ulasan dari para pelanggan. Tim kami berusaha keras untuk terus meningkatkan platform kami demi memenuhi kebutuhan dan harapan Anda. Terima kasih telah memilih Dine Ease sebagai panduan kuliner Anda. Temukan restoran terbaik bersama kami dan nikmati petualangan kuliner yang tak terlupakan!
+</p>
+</div>
+<div class="image__container">
+<img src="./images/food/food-2.jpg" alt="gambar makanan spagetti">
+<img src="./images/food/r-1.jpg" alt="gambar ilustrasi restaurant">
+</div>
+
 
 `;
 
