@@ -190,8 +190,8 @@ header {
 
 // Hero
 .hero-container{
-  min-height: 90vh;
   position: relative;
+  height: 90vh;
   
   .hero__image {
     width: 100%;
@@ -416,14 +416,16 @@ header {
 }
 
  .about__us {
-  height: 900vh;
+  height: auto;
   background-color: $night;
   color: $timberwolf;
-
-
+  
+  
   .about__content {
-    padding: 10px;
-
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+    
     .tagline {
       text-align: center;
       text-transform: uppercase;
@@ -443,7 +445,7 @@ header {
     p {
       font-family: sans-serif;
       padding-block: 5px;
-      // line-height: 1.4em;
+      line-height: 1.4em;
       text-align: center;
       font-size: 0.5em;
       padding: 0 15px;
@@ -453,8 +455,8 @@ header {
   .image__container {
     display: flex;
     gap: 20px;
+    padding-bottom: 50px;
     flex-direction: column;
-    margin-bottom: 20px;
     align-items: center;
     justify-content: center;
 
@@ -916,7 +918,7 @@ footer {
   .about__us .image__container {
     flex-direction: row;
     justify-content: center;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
     
   }
 }
