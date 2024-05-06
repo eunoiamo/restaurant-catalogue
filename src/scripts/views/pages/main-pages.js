@@ -1,7 +1,12 @@
 import 'lazysizes';
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import RestaurantAPI from '../../data/restaurant-source';
-import { createAboutUsElement, createHeroElement, createRestaurantItemTemplate } from '../templates/template-element';
+import {
+  createAboutUsElement,
+  createHeroElement,
+  createRestaurantItemTemplate,
+  createRestaurantTitleTemplate,
+} from '../templates/template-element';
 
 const MainPages = {
   async render() {
@@ -10,10 +15,7 @@ const MainPages = {
     <div class="about__us">  </div>
 
     <div class="restaurant__container">
-      <div class="inner_restaurant">
-        <h2>Daftar Restaurant</h2>
-        <p>Berikut merupakan daftar restaurant kami, silakan</p>
-      </div>
+      <div class="inner_restaurant"></div>
       <div class="restaurant-list"></div>
     </div>
 
@@ -24,12 +26,15 @@ const MainPages = {
     const hero = document.querySelector('.hero');
     const about = document.querySelector('.about__us');
     const restaurantContainer = document.querySelector('.restaurant-list');
+    const titleContainer = document.querySelector('.inner_restaurant');
     const restaurants = await RestaurantAPI.getDataRestaurant();
 
     hero.innerHTML = createHeroElement();
     restaurants.forEach((resto) => {
       restaurantContainer.innerHTML += createRestaurantItemTemplate(resto);
     });
+
+    titleContainer.innerHTML = createRestaurantTitleTemplate();
 
     about.innerHTML = createAboutUsElement();
   },
